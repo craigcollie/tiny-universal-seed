@@ -1,0 +1,4 @@
+:root {
+  --base-font-size: 30px;
+  --color-grey: color(black alpha(-50%));
+}
