@@ -3,10 +3,14 @@ import fetch from 'isomorphic-fetch';
 
 import { Route } from 'tiny-universal';
 
-const Page = ({ resolvedData }) => {
+const Page = ({ resolvedData, location }) => {
   const { title, body } = resolvedData;
+  const { pathname, search } = location;
   return (
     <div>
+      Path: {pathname}<br/>
+      Search: {search}<br/>
+      <hr/>
       <h1>{title}</h1>
       {body}
     </div>
