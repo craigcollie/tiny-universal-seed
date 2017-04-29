@@ -17,6 +17,18 @@ const Page = ({ resolvedData, location }) => {
   );
 };
 
+const BlankPage = ({ location }) => {
+  const { pathname, search } = location;
+  return (
+    <div>
+      Path: {pathname}<br/>
+      Search: {search}<br/>
+      <hr/>
+      <h1>Just a blank page</h1>
+    </div>
+  );
+}
+
 const getData = (params) => fetch(
   `https://jsonplaceholder.typicode.com/posts/${params.postId}`, {
     method: 'GET',
@@ -43,6 +55,14 @@ const Routes = () => (
       meta={{
         title: 'Two - Dynamic route',
         description: 'Two - Lorem ipsum'
+      }}
+    />
+    <Route
+      path="/no-route-resolve"
+      component={BlankPage}
+      meta={{
+        title: 'No route resolve',
+        description: 'Just a page'
       }}
     />
   </div>
