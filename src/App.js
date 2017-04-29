@@ -1,15 +1,14 @@
 import React from 'react';
-import { Router, RoutingProvider } from 'tiny-universal';
+import { Router, RoutingProvider, Link } from 'tiny-universal';
 
-import Header from './routes/common/Header';
-import Routes from './routes/Routes';
+import Routes from './Routes';
 
-//  Root router component
-//  Data from the original isomorphic fetch
-//  will be provided here along with location data
 const Root = (serverProps) => (
   <RoutingProvider {...serverProps} routes={Routes}>
-    <Header />
+    <ul>
+      <li><Link to="/" text="Home" /></li>
+      <li><Link to="/page/1" text="Page 1" /></li>
+    </ul>
     <Router />
   </RoutingProvider>
 );
