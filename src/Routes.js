@@ -25,6 +25,7 @@ const BlankPage = ({ location }) => {
       Search: {search}<br/>
       <hr/>
       <h1>Just a blank page</h1>
+      <img src="https://media2.giphy.com/media/YkZB63QKFfi3C/giphy.gif" width="100%" />
     </div>
   );
 }
@@ -52,6 +53,7 @@ const Routes = () => (
       component={Page}
       resolve={getData}
       routeParams={{ postId: 2 }}
+      cache={true}
       meta={{
         title: 'Two - Dynamic route',
         description: 'Two - Lorem ipsum'
