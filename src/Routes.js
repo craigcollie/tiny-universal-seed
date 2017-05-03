@@ -42,6 +42,11 @@ function getData({ id }) {
   }).then(res => res.json());
 }
 
+function getComplexData(routeParams) {
+  console.log(routeParams);
+  return Promise.resolve('it worked!')
+}
+
 const Routes = () => (
   <div>
     <Route
@@ -61,6 +66,11 @@ const Routes = () => (
         title: 'Two - Dynamic route',
         description: 'Two - Lorem ipsum'
       }}
+    />
+    <Route
+      path="/:segment/:path/:blah"
+      component={Page}
+      resolve={getComplexData}
     />
     <Route
       path="/no-route-resolve"

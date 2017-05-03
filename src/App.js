@@ -8,6 +8,7 @@ const Root = (serverProps) => (
     <ul>
       <li><Link to="/" text="Home" /></li>
       <li><Link to="/page/1" text="Page 1" /></li>
+      <li><Link to="/foo/bar/wee" text="Complex routing!" /></li>
       <li><Link to="/no-route-resolve" text="No route resolve" /></li>
       <li><Link to="/parent" text="Parent" /></li>
       <li><Link to="/parent/child" text="Child" /></li>
