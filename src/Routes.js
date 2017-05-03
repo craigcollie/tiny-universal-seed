@@ -6,35 +6,10 @@ import { Route } from 'tiny-universal';
 const Page = (props) => {
   return (
     <div>
-      {JSON.stringify(props)}
+      Route props: {JSON.stringify(props)}
     </div>
   );
 };
-
-const BlankPage = ({ location }) => {
-  const { pathname, search } = location;
-  return (
-    <div>
-      Path: {pathname}<br/>
-      Search: {search}<br/>
-      <hr/>
-      <h1>Just a blank page</h1>
-      <img src="https://media2.giphy.com/media/YkZB63QKFfi3C/giphy.gif" width="100%" />
-    </div>
-  );
-};
-
-const Parent = () => (
-  <div>
-    Parent
-  </div>
-);
-
-const Child = () => (
-  <div>
-    Child
-  </div>
-);
 
 function getData({ id }) {
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
@@ -43,7 +18,6 @@ function getData({ id }) {
 }
 
 function getComplexData(routeParams) {
-  console.log(routeParams);
   return Promise.resolve('it worked!')
 }
 
@@ -57,6 +31,7 @@ const Routes = () => (
         description: 'One - Lorem ipsum'
       }}
     />
+
     <Route
       path="/page/:id"
       component={Page}
@@ -67,22 +42,25 @@ const Routes = () => (
         description: 'Two - Lorem ipsum'
       }}
     />
+
     <Route
       path="/:segment/:path/:blah"
       component={Page}
       resolve={getComplexData}
     />
+
     <Route
       path="/no-route-resolve"
-      component={BlankPage}
+      component={Page}
       meta={{
         title: 'No route resolve',
         description: 'Just a page'
       }}
     />
+
     <Route
       path="/parent"
-      component={Parent}
+      component={Page}
     />
   </div>
 );
