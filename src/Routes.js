@@ -54,6 +54,11 @@ const Routes = () => (
     />
 
     <Route
+      path="/foo"
+      component={Page}
+    />
+
+    <Route
       path="/no-route-resolve"
       component={Page}
       meta={{

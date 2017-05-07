@@ -13,7 +13,8 @@ const Root = (serverProps) => (
 
       <li>
         <h2>Route with params /page/:id</h2>
-        <p>Should create the route and pass <strong>:id</strong> with the value</p>
+        <p>Should create the route and pass <strong>{'/page/:id'}</strong> with the values
+        in the URL</p>
         <ul>
           <li>
             <Link to="/page/1" text="Page 1" />
@@ -26,7 +27,8 @@ const Root = (serverProps) => (
 
       <li>
         <h2>Route with multiple params /page/:id</h2>
-        <p>Should create the route and pass <strong>:id</strong> with the value</p>
+        <p>Should create the route and pass <strong>{'/:segment/:path/:blah'}</strong> with the values
+        in the URL</p>
         <ul>
           <li>
             <Link to="/foo/bar/wee" text="/foo/bar/wee" />
@@ -35,6 +37,11 @@ const Root = (serverProps) => (
             <Link to="/1/2/foo" text="/1/2/foo" />
           </li>
         </ul>
+      </li>
+
+      <li>
+        <h2>Route with query params</h2>
+        <Link to="/foo?page=1" text="/foo?page=1" />
       </li>
 
       <li>
