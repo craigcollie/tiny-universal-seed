@@ -4,11 +4,11 @@ import { Router, RouteProvider } from 'tiny-universal';
 import Demo from './Demo';
 import Routes from './Routes';
 
-const Root = (serverProps) => (
-  <RouteProvider {...serverProps} routes={Routes}>
+const Root = () => (
+  <div>
     <Demo />
     <Router />
-  </RouteProvider>
+  </div>
 );
 
 export default Root;

@@ -11,12 +11,6 @@ const templateString = fs.readFileSync('./index.html');
 
 const app = express();
 
-app.use(
-  createTinyServer({
-    clientApp: App,
-    routes: Routes,
-    template: templateString,
-  })
-);
+app.use(createTinyServer(App, Routes, templateString));
 
 app.listen(8080);
