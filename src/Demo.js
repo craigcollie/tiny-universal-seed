@@ -43,6 +43,11 @@ const Demo = () => {
       </li>
 
       <li>
+        <h2>Route with rejected promise</h2>
+        <Link to="/error" text="/error" />
+      </li>
+
+      <li>
         <h2>No data resolving</h2>
         <Link to="/no-route-resolve" text="No route resolve" />
       </li>
