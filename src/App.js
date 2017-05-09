@@ -1,8 +1,7 @@
 import React from 'react';
-import { Router, RouteProvider } from 'tiny-universal';
+import { Router } from 'tiny-universal';
 
 import Demo from './Demo';
-import Routes from './Routes';
 
 const Root = () => (
   <div>
