@@ -1,16 +1,12 @@
 import React from 'react';
 import express from 'express';
-import path from 'path';
-import fs from 'fs';
 import { createTinyServer } from 'tiny-universal';
 
-import App from './App';
-import Routes from './Routes';
-
-const template = fs.readFileSync('./index.html');
+import config from './tinyConfig';
 
 const app = express();
+const tinyServer = createTinyServer(config);
 
-app.use(createTinyServer(App, Routes, template));
+app.use(tinyServer);
 
 app.listen(8080);
