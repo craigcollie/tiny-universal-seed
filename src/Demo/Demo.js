@@ -51,6 +51,11 @@ const Demo = () => {
         <h2>No data resolving</h2>
         <Link to="/no-route-resolve" text="No route resolve" />
       </li>
+
+      <li>
+        <h2>Invalid route path</h2>
+        <Link to="/invalid-route-path" text="/invalid-route-path" />
+      </li>
     </ul>
   );
 };

@@ -17,17 +17,15 @@ const template = `
   </html>`;
 
 export default {
-  //  Defaults
-  rootComponent: App,
-  routes: Routes,
-  template,
+  entry: {
+    rootComponent: App,
+    routes: Routes,
+    template,
+  },
 
   //  Lifecycle methods
   rootResolve: () => {
     console.log('root resolve');
-  },
-  beforeRouteChange: () => {
-    console.log('before route change');
   },
   afterRouteChange: () => {
     console.log('after route change');
