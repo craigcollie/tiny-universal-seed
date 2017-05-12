@@ -1,4 +1,3 @@
-import React from 'react';
 import express from 'express';
 import { createTinyServer } from 'tiny-universal';
 
