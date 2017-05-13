@@ -13,3 +13,9 @@ cache:
   directories:
   - $HOME/.yarn-cache
   - node_modules
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "fb365ed8-d5d7-44bb-b856-df5b09868785"
+  app: tiny-universal
