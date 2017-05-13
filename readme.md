@@ -1,4 +1,4 @@
-# Tiny Universal seed
+# Tiny Universal seed [![Build Status](https://travis-ci.org/craigcollie/tiny-universal-seed.svg?branch=master)](https://travis-ci.org/craigcollie/tiny-universal-seed)
 A quick and dirty project pack to get you up and running with Tiny Universal.
 
 ### Getting started
