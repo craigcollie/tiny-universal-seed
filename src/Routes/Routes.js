@@ -24,11 +24,11 @@ function getData({ id }) {
 }
 
 function getDataWithError() {
-  return Promise.reject('ERROR!');
+  return Promise.reject('Error resolving data!');
 }
 
 function getComplexData(routeParams) {
-  return Promise.resolve('it worked!')
+  return Promise.resolve('it worked!');
 }
 
 // const Routes = () => (
