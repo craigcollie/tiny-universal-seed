@@ -3,7 +3,7 @@ import webpack from 'webpack';
 export default {
   entry: './src/client.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: __dirname + '/public',
   },
   devServer: {
@@ -28,4 +28,11 @@ export default {
   node: {
     fs: 'empty',
   },
+
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: module => (module.context && module.context.indexOf('node_modules') !== -1),
+    }),
+  ],
 };
