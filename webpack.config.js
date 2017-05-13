@@ -12,15 +12,20 @@ export default {
       '*': {
         target: 'http://localhost:8080',
       },
-    }
+    },
   },
   module: {
     rules: [
       {
         test: /\.js?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader'],
       },
     ],
+  },
+
+  //  This is required
+  node: {
+    fs: 'empty',
   },
 };

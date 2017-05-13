@@ -29,9 +29,7 @@
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-0": "6.24.1",
     "babel-register": "^6.24.1",
-    "ejs": "^2.5.6",
     "extract-text-webpack-plugin": "^2.1.0",
-    "fs-extra": "^3.0.1",
     "script-loader": "^0.7.0",
     "webpack-dev-server": "^2.4.2"
   }
