@@ -6,7 +6,7 @@ import config from './tinyConfig';
 
 const app = express();
 const tinyServer = createTinyServer(config);
-const port = (process.env.NODE_ENV === 'production') ? 3000 : 8080;
+const port = process.env.PORT || 8080;
 
 app.use(tinyServer);
 app.use(express.static(path.resolve(__dirname, '../public')));
