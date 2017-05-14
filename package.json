@@ -2,9 +2,9 @@
   "name": "react-webpack2-flow-seed",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "node -r babel-register node_modules/.bin/webpack-dev-server --config=./webpack.config --watch",
-    "dev:server": "babel-node ./src/server"
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "node -r babel-register node_modules/.bin/webpack-dev-server --config=./webpack.config --watch",
+    "server": "babel-node ./src/server"
   },
   "dependencies": {
     "concurrently": "^3.4.0",
@@ -14,9 +14,7 @@
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "tiny-universal": "^0.0.15",
-    "webpack": "^2.3.3"
-  },
-  "devDependencies": {
+    "webpack": "^2.3.3",
     "babel": "6.23.0",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.2",
