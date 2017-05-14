@@ -1,19 +1,23 @@
 import webpack from 'webpack';
+import path from 'path';
 
 export default {
   entry: './src/client.js',
   output: {
     filename: '[name].bundle.js',
-    path: __dirname + '/public',
+    path: path.resolve(__dirname, '../public'),
   },
+
   devServer: {
     port: 3000,
+    publicPath: '/',
     proxy: {
       '*': {
         target: 'http://localhost:8080',
       },
     },
   },
+
   module: {
     rules: [
       {

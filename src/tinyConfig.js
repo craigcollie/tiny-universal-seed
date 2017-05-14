@@ -5,6 +5,6 @@ export default {
   entry: {
     rootComponent: App,
     routes: Routes,
-    template: './index.html',
+    template: './public/index.html',
   },
 };
