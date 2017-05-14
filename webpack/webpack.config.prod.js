@@ -1,21 +1,18 @@
 import webpack from 'webpack';
 import path from 'path';
 
+import { jsLoader } from './webpack.loaders';
+
 export default {
   entry: './src/client.js',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../public'),
+    publicPath: '/',
   },
 
   module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-    ],
+    rules: [jsLoader],
   },
 
   //  This is required

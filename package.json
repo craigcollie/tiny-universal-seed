@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run clean && npm run dist && npm run serve:prod",
-    "dev": "concurrently \"npm run client\" \"npm run serve:dev\"",
+    "dev": "npm run copy && concurrently \"npm run client\" \"npm run serve:dev\"",
+    "copy": "cp templates/index.html public/index.html",
     "client": "node -r babel-register node_modules/.bin/webpack-dev-server --config=./webpack/webpack.config.dev --watch",
     "serve:dev": "babel-node ./src/server",
     "serve:prod": "NODE_ENV=production babel-node ./src/server",
