@@ -17,7 +17,7 @@
     "lodash": "^4.17.4",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "tiny-universal": "^0.0.23",
+    "tiny-universal": "^0.0.24",
     "webpack": "^2.3.3"
   },
   "devDependencies": {
