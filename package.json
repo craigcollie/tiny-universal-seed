@@ -2,7 +2,7 @@
   "name": "react-webpack2-flow-seed",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"yarn dev:client\" \"yarn dev:server\"",
+    "start": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
     "dev:client": "node -r babel-register node_modules/.bin/webpack-dev-server --config=./webpack.config --watch",
     "dev:server": "babel-node ./src/server"
   },
