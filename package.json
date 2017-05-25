@@ -20,10 +20,10 @@
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "tiny-universal": "^0.0.26",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "autoprefixer": "^7.1.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
     "babel": "6.23.0",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.2",
