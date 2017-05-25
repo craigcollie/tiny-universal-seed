@@ -1,10 +1,14 @@
 import webpack from 'webpack';
 import path from 'path';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-import { jsLoader } from './webpack.loaders';
+import { jsLoader, cssLoader } from './webpack.loaders';
 
 export default {
-  entry: './src/client.js',
+  entry: [
+    './src/client.js',
+  ],
+
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../public'),
@@ -22,8 +26,13 @@ export default {
   },
 
   module: {
-    rules: [jsLoader],
+    rules: [
+      jsLoader,
+      cssLoader,
+    ],
   },
+
+  devtool: 'cheap-module-source-map',
 
   //  This is required
   node: {
@@ -31,6 +40,11 @@ export default {
   },
 
   plugins: [
+    new ExtractTextPlugin({
+      filename: 'bundle.css',
+      allChunks: true,
+    }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: module => (module.context && module.context.indexOf('node_modules') !== -1),

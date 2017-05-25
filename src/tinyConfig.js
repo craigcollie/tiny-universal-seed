@@ -1,5 +1,5 @@
-import App from './App/App';
-import Routes from './Routes/Routes';
+import App from './App';
+import Routes from './Routes';
 
 export default {
   entry: {

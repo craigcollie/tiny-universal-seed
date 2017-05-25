@@ -1,0 +1,27 @@
+@import 'global';
+
+.table {
+  background: white;
+  min-width: 100%;
+  table-layout: fixed;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  box-shadow: $box-shadow-default;
+
+  th {
+    text-transform: uppercase;
+    font-size: $font-xs;
+    border-bottom: 1px solid $color-grey-200;
+    color: $color-grey-500;
+    padding: $space-xs;
+  }
+
+  td {
+    font-size: $font-sm;
+    padding: $space-xs;
+  }
+}
+
+.cell_id {
+  width: 50px;
+}
