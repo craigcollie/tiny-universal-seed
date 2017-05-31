@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'tiny-universal';
 
 import Admin from './routes/Admin/Admin';
-import getData from './services/firebaseService';
+import firebaseService from './services/firebaseService';
 
 const Routes = () => (
   <div>
@@ -14,7 +14,6 @@ const Routes = () => (
     <Route
       path="/admin/:refId"
       component={Admin}
-      resolve={getData}
     />
   </div>
 );

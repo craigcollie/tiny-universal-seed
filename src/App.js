@@ -13,6 +13,9 @@ const Root = () => (
       <li>
         <Link to="/admin/events">Events</Link>
       </li>
+      <li>
+        <Link to="/admin/locations">Locations</Link>
+      </li>
     </ul>
     <Router />
   </div>
